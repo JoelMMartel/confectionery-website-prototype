@@ -3,3 +3,74 @@
 @-o-viewport { width: device-width; scale: 1; }
 @-webkit-viewport { width: device-width; scale: 1; }
 @viewport { width: device-width; scale: 1; }
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.title {
+  align-items: center;
+  font-weight: bold;
+  display: flex;
+  font-size: .75rem;
+  color: #fff;
+  background-color: #a36fbf;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+.header-icon {
+  width: 40px;
+  padding: 0;
+  margin: 1em;
+}
+
+
+ul {
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.topnav {
+  background-color: #a36fbf;
+  padding: 0;
+  list-style: none;
+  justify-content: center;
+}
+
+li {
+
+  justify-content: center;
+  background-color: #a36fbf;
+  padding: .5em 0;
+  border: 1px solid #482c57;
+  flex: 1;
+  text-align: center;
+  flex-basis: 50%;
+}
+
+li a {
+  text-decoration: none;
+}
