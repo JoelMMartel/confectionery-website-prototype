@@ -79,8 +79,7 @@ ul {
 li {
   justify-content: center;
   background-color: #aaa;
-  padding: .5em 0;
-  margin: .5em .5em 0;
+  padding: .5em 1em;
   flex: 1;
   text-align: center;
   flex-basis: 40%;
@@ -119,6 +118,31 @@ h2 {
 
 .section-img:nth-of-type(2) {
   display: none;
+}
+
+.reviews {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  padding: 1em;
+  background-color: #aaa;
+  border-radius: 20px;
+}
+
+.reviews h3 {
+  text-align: center;
+  margin: 0;
+}
+
+.tweets dt {
+  text-align: center;
+  margin: .5em;
+}
+
+.tweets dd {
+  text-align: center;
+  margin: 0;
 }
 
 .shop {
