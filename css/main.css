@@ -14,13 +14,19 @@ html {
   box-sizing: inherit;
 }
 
+header {
+  display: flex;
+  flex-direction: column;
+}
+
 .title {
+  flex-basis: 100%;
   align-items: center;
   font-weight: bold;
   display: flex;
   font-size: .75rem;
   color: #fff;
-  background-color: #a36fbf;
+  background-color: #2edbb6;
   justify-content: space-between;
   margin: 0;
   padding: 0;
@@ -33,20 +39,20 @@ h1 {
 
 body {
   margin: 0;
-  background-color: #f4e0ff;
+  background-color: #9ff5e2;
 }
 
 img {
   display: block;
   width: 100%;
 }
+
 .header-icon {
   width: 40px;
   padding: 0;
   margin: 1em;
   transform: rotate(45deg);
 }
-
 
 ul {
   display: flex;
@@ -59,21 +65,21 @@ ul {
 }
 
 .topnav {
-  background-color: #a36fbf;
+  background-color: #2edbb6;
   padding: 0;
   list-style: none;
   justify-content: center;
 }
 
 li {
-
+  border-radius: 25px;
   justify-content: center;
-  background-color: #a36fbf;
+  background-color: #2edbb6;
   padding: .5em 0;
-  border: 1px solid #482c57;
+  margin: .5em .5em 0;
   flex: 1;
   text-align: center;
-  flex-basis: 50%;
+  flex-basis: 40%;
 }
 
 li a {
@@ -87,30 +93,33 @@ h2 {
 }
 
 .intro {
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
+.intro-images {
+  display: flex;
+  flex-direction: column;
+}
+
 .intro p {
-  padding: 0 1em;
+  padding: 1em;
   margin: 0 0 1em 0;
 }
 
 .intro img {
-  margin: 0 0 1em 0;
-  border: solid 2px;
-  border-color: #482c57;
+  margin: 0;
 }
 
-.intro img:last-child {
+.section-img:nth-of-type(2) {
   display: none;
 }
 
 .shop {
   position: relative;
-  border: solid 2px;
-  border-color: #482c57;
+  padding: 0 1em;
 }
 
 .link-card-body {
@@ -122,8 +131,13 @@ h2 {
   color: #000;
 }
 
+.shop-loc {
+  display: flex;
+  flex-direction: column;
+}
+
 .locations {
-  padding: 1em;
+  padding: 1em 4em;
   margin: 0;
 }
 
@@ -134,11 +148,10 @@ dl dt {
 
 dl dd {
   margin-bottom: .25rem;
-  text-align: center;
 }
 
 .btn {
-  background-color: #482c57;
+  background-color: #2edbb6;
   color: #fff;
   display: inline-block;
   padding: .4em .75em .3em;
@@ -146,8 +159,7 @@ dl dd {
   text-decoration: none;
   font-size: 1.125rem;
   border: solid 3px;
-  border-color: #482c57;
-
+  border-color: #2edbb6;
 }
 
 .feature {
@@ -176,9 +188,9 @@ footer {
 
 @media only screen and (min-width: 25em) {
 
-html {
+  html {
   font: normal 110%/1.4 "Playfair Display", serif;
-}
+  }
 
 }
 
@@ -187,3 +199,130 @@ html {
   html {
     font: normal 120%/1.5 "Playfair Display", serif;
   }
+
+  h1 {
+    margin: .25rem;
+  }
+
+  .header-icon {
+    margin: 0 1rem;
+  }
+
+  .intro-images {
+    position: relative;
+    max-height: 300px;
+    overflow: hidden;
+  }
+
+  .intro img:first-child {
+    display: none;
+  }
+
+  .section-img:nth-of-type(2) {
+    display: block;
+  }
+
+  .intro-body {
+    position: absolute;
+    background-color: #ff8888;
+    border-radius: 0 0 25px 0;
+    opacity: .85;
+    display: inline-block;
+    max-width: 35em;
+  }
+
+  .intro-body p {
+    padding: .9em;
+    margin: 0;
+  }
+
+  .shop-loc {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .shop {
+    order: 1;
+    flex-basis: 50%;
+    padding: 1em;
+    padding-bottom: 0;
+  }
+
+  .story {
+    display: block;
+    position: relative;
+    flex-basis: 100%;
+    padding: 1em;
+  }
+
+  .story-card-body {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+  }
+
+  .locations {
+    padding: 1em;
+    flex-basis: 75%;
+  }
+  .location-story {
+    order: 2;
+    display: flex;
+    flex-basis: 70%;
+    flex-direction: row;
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  html {
+    font: normal 130%/1.5 "Playfair Display", serif;
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+
+  .header-icon {
+    display: none;
+  }
+
+  .title h1 {
+    padding-left: 1rem;
+    flex basis: 20%;
+  }
+
+  header nav {
+    position: absolute;
+    bottom: 5%;
+    left: 62%;
+  }
+
+  ul {
+  flex-wrap: nowrap;
+  }
+
+  li {
+    flex-basis: 100%;
+  }
+
+  h2 {
+    text-align: left;
+    margin: 1rem;
+  }
+
+  .intro {
+    width: 50%;
+  }
+  .shop-loc {
+    flex-direction: row;
+  }
+
+  .top-sellers {
+    display: block;
+  }
+
+}
