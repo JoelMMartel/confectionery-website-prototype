@@ -21,6 +21,12 @@ html {
 header {
   display: flex;
   flex-direction: column;
+  display: flex;
+  color: #fff;
+  background-color: #aaa;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
 
 .title {
@@ -121,28 +127,33 @@ h2 {
 }
 
 .reviews {
+  width: 100%;
   max-width: 400px;
   display: flex;
   flex-direction: column;
-  margin: 1em;
+  margin: 1em auto;
   padding: 1em;
   background-color: #aaa;
-  border-radius: 20px;
+}
+
+.profile {
+  display: none;
 }
 
 .reviews h3 {
   text-align: center;
   margin: 0;
+  margin-bottom: 1em;
 }
 
-.tweets dt {
-  text-align: center;
-  margin: .5em;
+.tweet {
+  display: flex;
 }
 
-.tweets dd {
-  text-align: center;
+.tweet p:first-of-type {
   margin: 0;
+  font-weight: 700;
+  text-align: center;
 }
 
 .shop {
@@ -280,6 +291,33 @@ footer {
     flex-wrap: wrap;
   }
 
+  .reviews {
+    flex-basis: 50%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: none;
+    order: 2;
+    justify-content: center;
+  }
+
+  .reviews h3 {
+    flex-basis: 100%;
+  }
+
+  .profile {
+    display: inline-block;
+    flex-basis: 20%;
+    padding: 1em;
+  }
+
+  .post {
+    flex-basis: 80%;
+  }
+
+  .tweet {
+    align-items: flex-start;
+  }
+
   .shop {
     order: 1;
     flex-basis: 50%;
@@ -322,7 +360,6 @@ footer {
   header {
     display: flex;
     flex-direction: row;
-    position: relative;
   }
 
   .header-icon {
@@ -331,17 +368,17 @@ footer {
 
   .title h1 {
     padding-left: 1rem;
-    flex-basis: 20%;
+    flex-basis: 50%;
   }
 
-  header nav {
-    position: absolute;
-    bottom: 5%;
-    left: 62%;
+  .header-nav {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 50%;
   }
 
   ul {
-  flex-wrap: nowrap;
+    flex-wrap: nowrap;
   }
 
   li {
@@ -405,6 +442,16 @@ footer {
     display: inline-block;
     flex-basis: 50%;
     padding: 0 1em;
+  }
+
+  .reviews {
+    flex-basis: 50%;
+    margin: 1em;
+  }
+
+  .profile {
+    display: inline-block;
+    flex-basis: 30%;
   }
 
   .feature {
