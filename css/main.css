@@ -127,8 +127,8 @@ h2 {
 }
 
 .reviews {
+  align-items: center
   width: 100%;
-  max-width: 400px;
   display: flex;
   flex-direction: column;
   margin: 1em auto;
@@ -148,6 +148,8 @@ h2 {
 
 .tweet {
   display: flex;
+  align-items: center;
+  max-width: 400px;
 }
 
 .tweet p:first-of-type {
@@ -292,11 +294,11 @@ footer {
   }
 
   .reviews {
+    order: 2;
     flex-basis: 50%;
     flex-direction: row;
     flex-wrap: wrap;
     max-width: none;
-    order: 2;
     justify-content: center;
   }
 
@@ -397,15 +399,15 @@ footer {
   }
 
   .intro {
-    order: 1;
+    order: 8;
     padding: 0 1em;
     padding-top: 2.5em;
-    width: 50%;
+    width: 30%;
     max-height: 400px;
   }
 
   .shop-loc {
-    order: 3;
+    order: 1;
     flex-direction: row;
     flex-wrap: wrap;
     flex-basis: 100%;
@@ -438,13 +440,14 @@ footer {
   }
 
   .top-sellers {
-    order: 2;
+    order: 5;
     display: inline-block;
-    flex-basis: 50%;
+    flex-basis: 40%;
     padding: 0 1em;
   }
 
   .reviews {
+    order: 4;
     flex-basis: 50%;
     margin: 1em;
   }
@@ -456,7 +459,7 @@ footer {
 
   .feature {
     position: relative;
-    order: 3;
+    order: 2;
     padding-top: 1em;
     padding-right: 1em;
     flex-basis: 50%;
