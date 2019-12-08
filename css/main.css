@@ -21,7 +21,6 @@ html {
 header {
   display: flex;
   flex-direction: column;
-  display: flex;
   color: #fff;
   justify-content: space-between;
   margin: 0;
@@ -35,7 +34,7 @@ header {
   display: flex;
   font-size: .75rem;
   color: #fff;
-  background-color: #ff8888;
+  background-color: #f88;
   justify-content: space-between;
   margin: 0;
   padding: 0;
@@ -49,7 +48,7 @@ h1 {
 
 body {
   margin: 0;
-  background-color: #ffeeee;
+  background-color: #fee;
 }
 
 img {
@@ -75,7 +74,7 @@ ul {
 }
 
 .topnav {
-  background-color: #ff8888;
+  background-color: #f88;
   padding: 0;
   list-style: none;
   justify-content: center;
@@ -83,7 +82,8 @@ ul {
 
 li {
   justify-content: center;
-  background-color: #ff8888;
+  background-color: #f88;
+  border: 2px solid #e77;
   padding: .5em 1em;
   flex: 1;
   text-align: center;
@@ -91,12 +91,17 @@ li {
 }
 
 li:hover {
-  background-color: #333;
+  background-color: #d44;
+  border-color: #d44;
+}
+
+li a:hover {
+  color: #000;
 }
 
 li a {
   text-decoration: none;
-  font-family: "Playfair Display", Serif;
+  font-family: "Playfair Display", serif;
   color: #fff;
 }
 
@@ -118,7 +123,7 @@ h2 {
 
 .intro p {
   padding: 1em;
-  margin: 0 0 1em 0;
+  margin: 0 0 1em;
 }
 
 .intro img {
@@ -136,7 +141,7 @@ h2 {
   flex-direction: column;
   margin: 1em auto;
   padding: 1em;
-  background-color: #ff8888;
+  background-color: #f88;
 }
 
 .profile {
@@ -157,7 +162,7 @@ h2 {
 
 .tweet p:first-of-type {
   margin: 0;
-  font-weight: 700;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -176,10 +181,10 @@ h2 {
   right: 15%;
   font-weight: 900;
   font-size: 1.5em;
-  background-color: #ff8888;
+  background-color: #f88;
   border-radius: 6px;
   opacity: .9;
-  border: 9px solid #ff8888;
+  border: 9px solid #f88;
   color: #000;
 }
 
@@ -204,7 +209,7 @@ dl dd {
 }
 
 .btn {
-  background-color: #ff8888;
+  background-color: #f88;
   color: #fff;
   display: inline-block;
   padding: .4em .75em .3em;
@@ -212,7 +217,7 @@ dl dd {
   text-decoration: none;
   font-size: 1.125rem;
   border: solid 3px;
-  border-color: #ff8888;
+  border-color: #f88;
 }
 
 .feature {
@@ -223,13 +228,18 @@ dl dd {
   display: none;
 }
 
+.img-flex {
+  display: block;
+  width: 100%;
+}
+
 .story-card-body {
   font-weight: 900;
   font-size: 1.5em;
-  background-color: #ff8888;
+  background-color: #f88;
   border-radius: 6px;
   opacity: .9;
-  border: 9px solid #ff8888;
+  border: 9px solid #f88;
   color: #000;
   min-width: 120px;
 }
@@ -240,7 +250,7 @@ dl dd {
 
 .footer {
   display: block;
-  background-color: #ff8888;
+  background-color: #f88;
   padding: 1em 0;
 }
 
@@ -253,7 +263,7 @@ footer {
 @media only screen and (min-width: 25em) {
 
   html {
-  font: normal 110%/1.4 "Playfair Display", serif;
+    font: normal 110%/1.4 "Playfair Display", serif;
   }
 
 }
@@ -261,7 +271,8 @@ footer {
 @media only screen and (min-width: 38em) {
 
   html {
-    font: normal 120%/1.5 "Playfair Display", serif;
+    font-size: 110%;
+    line-height: 1.4;
   }
 
   h1 {
@@ -288,8 +299,8 @@ footer {
 
   .intro-body {
     position: absolute;
-    background-color: #ff8888;
-    border-radius: 0 0 25px 0;
+    background-color: #f88;
+    border-radius: 0 0 25px;
     opacity: .85;
     display: inline-block;
     max-width: 608px;
@@ -356,6 +367,7 @@ footer {
     padding: 1em;
     flex-basis: 75%;
   }
+
   .location-story {
     order: 2;
     display: flex;
@@ -368,7 +380,8 @@ footer {
 @media only screen and (min-width: 60em) {
 
   html {
-    font: normal 130%/1.5 "Playfair Display", serif;
+    font-size: 120%;
+    line-height: 1.5;
   }
 
   header {
@@ -391,7 +404,7 @@ footer {
     flex-basis: 50%;
   }
 
-  header ul li{
+  header ul li {
     padding: 1em;
   }
 
@@ -404,8 +417,8 @@ footer {
   }
 
   main {
-   display: flex;
-   flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   h2 {
@@ -512,12 +525,12 @@ footer {
 
   .feature-body {
     text-align: center;
-    display:block;
+    display: block;
     width: 90%;
     bottom: 15%;
     position: absolute;
     border-radius: 0 33px 33px 0;
-    background-color: #ff8888;
+    background-color: #f88;
     opacity: .85;
   }
 
@@ -534,9 +547,14 @@ footer {
     flex-basis: 100%;
     order: 100;
   }
+
 }
 
 @media only screen and (min-width: 90em) {
+
+  html {
+    font-size: 130%;
+  }
 
   .top-sellers {
     display: flex;
@@ -545,10 +563,9 @@ footer {
     justify-content: space-around;
   }
 
-  .top-sellers h3{
+  .top-sellers h3 {
     flex-basis: 100%;
   }
-
 
   .candy-card {
     display: flex;
@@ -572,4 +589,5 @@ footer {
   .locations {
     flex-basis: 25%;
   }
+
 }
