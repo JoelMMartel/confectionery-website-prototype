@@ -83,7 +83,7 @@ ul {
 li {
   justify-content: center;
   background-color: #f88;
-  border: 2px solid #e77;
+  border: .5px solid #e77;
   padding: .5em 1em;
   flex: 1;
   text-align: center;
